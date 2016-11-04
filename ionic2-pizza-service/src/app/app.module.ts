@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { PizzaAppComponent } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { OrderComponent } from '../pages/order/order.component';
 
 @NgModule({
   declarations: [
     PizzaAppComponent,
-    HomePage
+    OrderComponent
   ],
   imports: [
     IonicModule.forRoot(PizzaAppComponent)
@@ -14,7 +14,7 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     PizzaAppComponent,
-    HomePage
+    OrderComponent
   ],
   providers: []
 })

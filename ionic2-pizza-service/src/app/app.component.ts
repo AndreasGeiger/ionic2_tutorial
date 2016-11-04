@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-
-import { HomePage } from '../pages/home/home';
+import { OrderComponent } from '../pages/order/order.component';
 
 
 @Component({
-  template: 'Hello World'
+  template: '<ion-nav [root]="rootPage"></ion-nav>'
 })
 export class PizzaAppComponent {
-
+  rootPage: any = OrderComponent;
 }
