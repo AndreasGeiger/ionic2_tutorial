@@ -1,13 +1,13 @@
 <ion-header>
-  <ion-toolbar>
-    <p>Das ist ein Test. in der Toolbar</p>
-  </ion-toolbar>
+  <ion-navbar>
+   <ion-title>Pizza App</ion-title>
+  </ion-navbar>
 </ion-header>
 <ion-footer>
   <p>Das ist ein Test im Footer.</p>
 </ion-footer>
 <ion-content>
-  <button ion-button (click)="scrollToBottom()">To Bottom</button>
+  <button [navPush]="aboutComponent">Über Uns</button>
   <div style="height: 2000px;">
     <b>Hello</b> World!
   </div>
