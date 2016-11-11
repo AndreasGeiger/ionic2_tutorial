@@ -3,7 +3,7 @@ import { OrderComponent } from '../pages/order/order.component';
 
 
 @Component({
-  template: '<ion-nav [root]="rootPage"></ion-nav>'
+  templateUrl: './app.component.html'
 })
 export class PizzaAppComponent {
   rootPage: any = OrderComponent;
