@@ -3,6 +3,7 @@ import { IonicApp, IonicModule } from 'ionic-angular';
 import { PizzaAppComponent } from './app.component';
 import { OrderComponent } from '../pages/order/order.component';
 import { AboutComponent } from '../about/index';
+import {PizzaService} from '../providers';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,6 @@ import { AboutComponent } from '../about/index';
     OrderComponent,
     AboutComponent
   ],
-  providers: []
+  providers: [PizzaService]
 })
 export class AppModule {}

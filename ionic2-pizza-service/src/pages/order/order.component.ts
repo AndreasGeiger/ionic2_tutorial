@@ -1,26 +1,23 @@
-import {Component, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Content} from 'ionic-angular';
 import {NavController} from 'ionic-angular';
 import {AboutComponent} from '../../about/index';
+import {PizzaService} from '../../providers';
+import {Pizza} from '../../models';
 
 @Component({
   templateUrl: 'order.component.html'
 })
+export class OrderComponent implements OnInit {
+  pizzas: Pizza[] = [];
 
-export class OrderComponent{
-  aboutComponent = AboutComponent;
-  constructor (private nav: NavController){
+  constructor(
+    private pizzaService: PizzaService
+  ) {}
 
-  }
-  openAbout() {
-    this.nav.push(AboutComponent);
-  }
-  @ViewChild(Content) content : Content;
-
-  scrollToTop(){
-    this.content.scrollToTop();
-  }
-  scrollToBottom(){
-    this.content.scrollToBottom();
+  ngOnInit() {
+    this.pizzaService.getPizzas().subscribe(pizzas => {
+      this.pizzas = pizzas;
+    });
   }
 }

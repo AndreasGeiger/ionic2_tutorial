@@ -9,11 +9,10 @@
 <ion-footer>
   <p>Das ist ein Test im Footer.</p>
 </ion-footer>
-<ion-content>
-  <button ion-button [navPush]="aboutComponent">Über Uns</button>
-  <div style="height: 2000px;">
-    <b>Hello</b> World!
-  </div>
-  <b>on bottom</b>
-  <button ion-button (click)="scrollToTop()">To Top</button>
+<ion-content class="order">
+  <ion-list>
+    <ion-item *ngFor="let pizza of pizzas">
+      {{pizza.name}}
+    </ion-item>
+  </ion-list>
 </ion-content>
